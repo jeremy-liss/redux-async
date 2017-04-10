@@ -5,7 +5,7 @@ import {fetchPosts} from '../actions'
 let LoadSubreddit = ({dispatch}) => (
   <button
     onClick={() => dispatch(fetchPosts('newzealand'))}
-    >Fetch Posts</button>
+    >Fetch New Zealand</button>
 )
 
 LoadSubreddit = connect()(LoadSubreddit)
