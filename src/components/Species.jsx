@@ -4,16 +4,16 @@ import Character from './Character'
 
 const Species = ({species}) => (
   <div>
-    {species.map((character) =>
+    {species.map((character,i) =>
       <Character
-        name={character}
+        name={character} key={i}
         />
     )}
   </div>
 )
 
-Character.propTypes = {
-  characters: PropTypes.array.isRequired
+Species.propTypes = {
+  species: PropTypes.array.isRequired
 }
 
 export default Species

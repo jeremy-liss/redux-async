@@ -35,5 +35,8 @@
       "es2015",
       "react"
     ]
+  },
+  "dependencies": {
+    "prop-types": "^15.5.6"
   }
 }
