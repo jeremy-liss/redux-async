@@ -10,8 +10,8 @@ const App = () => (
   <div className='app-container'>
     <LoadSubreddit />
     <NewSubreddit />
-    <SubredditContainer />
     <LoadSpecies />
+    <SubredditContainer />
     <SpeciesContainer />
 
   </div>
