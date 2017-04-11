@@ -11,7 +11,6 @@ let store = createStore(reducers, compose(
   applyMiddleware(thunkMiddleware),
   window.devToolsExtension ? window.devToolsExtension() : f => f
 ))
-
 document.addEventListener('DOMContentLoaded', () => {
   render(
     <Provider store={store}>
