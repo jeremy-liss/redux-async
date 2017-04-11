@@ -20,3 +20,24 @@ export function fetchPosts (subreddit) {
       })
   }
 }
+
+export const receiveCharacters = (characters) => {
+  return {
+    type: 'RECEIVE_CHARACTERS',
+    characters: characters.map(character => character.name)
+  }
+}
+
+export function fetchCharacters () {
+  return (dispatch) => {
+    request
+      .get(`http://www.swapi.co/api/species/?format=json`)
+      .end((err, res) => {
+        if (err) {
+          console.error(err.message)
+          return
+        }
+        dispatch(receiveCharacters(res.body.results))
+      })
+  }
+}
