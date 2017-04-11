@@ -4,13 +4,13 @@ import Character from './Character'
 
 const Characters = ({characters}) => (
   <div>
-    {characters.map((character) =>
-      <Character name={character} />
+    {characters.map((character, i) =>
+      <Character name={character} key={i} />
     )}
   </div>
 )
 
-Character.propTypes = {
+Characters.propTypes = {
   characters: PropTypes.array.isRequired
 }
 
