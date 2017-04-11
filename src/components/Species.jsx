@@ -2,12 +2,11 @@ import React, {PropTypes} from 'react'
 
 import Character from './Character'
 
-const Character = ({characters}) => (
+const Species = ({species}) => (
   <div>
-    {characters.map((character, i) =>
+    {species.map((character) =>
       <Character
-        key={i}
-        name={character.title}
+        name={character}
         />
     )}
   </div>
@@ -17,4 +16,4 @@ Character.propTypes = {
   characters: PropTypes.array.isRequired
 }
 
-export default Character
+export default Species
